@@ -1,5 +1,6 @@
 #include <iostream>
-#include "../inc/client.h"
+//#include "../inc/client.h"
+#include "client.h"
 
 using namespace std;
 

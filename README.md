@@ -1,4 +1,16 @@
 # AmosChat
+usage:
+1) cmake
+ ./build
+
+2) make
+
+
+
+------------- 2020.2.16
+1. add cmake, use script to build
+2. fix make, fix the 2nd problem mentioned yesterday, but not correct too.
+
 
 
 ------------- 2020.2.15

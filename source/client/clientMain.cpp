@@ -1,4 +1,5 @@
-#include "../inc/client.h"
+//#include "../inc/client.h"
+#include "client.h"
 
 int main(int argc, char *argv[])
 {

@@ -3,15 +3,15 @@ NAME_CLIENT = clientMain
 
 TARGETS = $(NAME_SERVER) $(NAME_CLIENT)
 
-SOURCE_COMMON = $(wildcard ./common/*.cpp)
-SOURCE_SERVER = $(SOURCE_COMMON) $(wildcard ./server/src/*.cpp)
-SOURCE_CLIENT = $(SOURCE_COMMON) $(wildcard ./client/src/*.cpp)
+SOURCE_SERVER = $(wildcard ./server/*.cpp) $(wildcard ./server/src/*.cpp)
+SOURCE_CLIENT = $(wildcard ./client/*.cpp) $(wildcard ./client/src/*.cpp)
 
 OBJ_SERVER = $(patsubst %.cpp, %.o, $(SOURCE_SERVER))
 OBJ_CLIENT = $(patsubst %.cpp, %.o, $(SOURCE_CLIENT))
 
-INCLUDE_COMMON = -I ./common/
-
+# this is wrong, ./server/inc/ and ./client/inc/ are not common header.
+INCLUDE_COMMON = -I./common/ -I./server/inc/ -I./client/inc/
+ 
 CC = g++
 CFLAGS=-std=c++11
 
